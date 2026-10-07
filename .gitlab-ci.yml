@@ -1,10 +1,24 @@
 # Проверка решений при каждом пуше. Та же команда, что вы запускаете локально.
+variables:
+  GITLAB_DOCKER_PROXY: gitlab.education.tbank.ru:443/t-databases-pg-2026/core/dependency_proxy/containers
+
 check:
   image: docker:27-cli
+  tags:
+    - dind
   services:
-    - docker:27-dind
+    - name: docker:dind
+      alias: docker
   variables:
-    DOCKER_HOST: tcp://docker:2375
-    DOCKER_TLS_CERTDIR: ""
+    DOCKER_HOST: tcp://docker:2376
+    DOCKER_TLS_CERTDIR: "/certs"
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_CERT_PATH: "$DOCKER_TLS_CERTDIR/client"
+  before_script:
+    - echo "$CI_JOB_TOKEN" | docker login gitlab.education.tbank.ru:443 -u gitlab-ci-token --password-stdin
+    - docker pull ${GITLAB_DOCKER_PROXY}/library/postgres:16-alpine
+    - docker tag ${GITLAB_DOCKER_PROXY}/library/postgres:16-alpine postgres:16-alpine
+    - docker pull ${GITLAB_DOCKER_PROXY}/minusd/sql-practice:1
+    - docker tag ${GITLAB_DOCKER_PROXY}/minusd/sql-practice:1 minusd/sql-practice:1
   script:
     - docker compose run --rm runner runner ci --pack /pack.enc --solutions /solutions
