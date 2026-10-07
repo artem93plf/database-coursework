@@ -10,19 +10,16 @@ check:
     - name: ${GITLAB_DOCKER_PROXY}/library/docker:dind
       alias: docker
   variables:
-    DOCKER_HOST: tcp://docker:2376
-    DOCKER_TLS_CERTDIR: "/certs"
-    DOCKER_TLS_VERIFY: 1
-    DOCKER_CERT_PATH: "$DOCKER_TLS_CERTDIR/client"
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
   before_script:
-    # dind создаёт сертификаты при старте, а задача стартует параллельно с ним — ждём.
+    # dind стартует параллельно с задачей — ждём, пока демон начнёт отвечать.
     - |
       for i in $(seq 1 60); do
-        [ -f "$DOCKER_CERT_PATH/ca.pem" ] && docker info >/dev/null 2>&1 && break
+        docker info >/dev/null 2>&1 && break
         echo "Ждём docker daemon ($i/60)..."
         sleep 2
       done
-      ls -la /certs /certs/client || true
       docker info >/dev/null
     - echo "$CI_JOB_TOKEN" | docker login gitlab.education.tbank.ru:443 -u gitlab-ci-token --password-stdin
     - docker pull ${GITLAB_DOCKER_PROXY}/library/postgres:16-alpine
