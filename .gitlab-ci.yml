@@ -9,6 +9,8 @@ check:
   services:
     - name: ${GITLAB_DOCKER_PROXY}/library/docker:dind
       alias: docker
+      # Демон dind не знает корпоративный CA, которым подписан gitlab.education.tbank.ru.
+      command: ["--insecure-registry=gitlab.education.tbank.ru:443"]
   variables:
     DOCKER_HOST: tcp://docker:2375
     DOCKER_TLS_CERTDIR: ""
