@@ -1,6 +1,6 @@
 # Проверка решений при каждом пуше. Та же команда, что вы запускаете локально.
 variables:
-  GITLAB_DOCKER_PROXY: gitlab.education.tbank.ru:443/t-databases-pg-2026/core/dependency_proxy/containers
+  GITLAB_DOCKER_PROXY: gitlab.education.tbank.ru:443/t-databases-pg-2026/materials/dependency_proxy/containers
 
 check:
   image: ${GITLAB_DOCKER_PROXY}/library/docker:27-cli
