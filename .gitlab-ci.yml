@@ -3,11 +3,11 @@ variables:
   GITLAB_DOCKER_PROXY: gitlab.education.tbank.ru:443/t-databases-pg-2026/core/dependency_proxy/containers
 
 check:
-  image: docker:27-cli
+  image: ${GITLAB_DOCKER_PROXY}/library/docker:27-cli
   tags:
     - dind
   services:
-    - name: docker:dind
+    - name: ${GITLAB_DOCKER_PROXY}/library/docker:dind
       alias: docker
   variables:
     DOCKER_HOST: tcp://docker:2376
