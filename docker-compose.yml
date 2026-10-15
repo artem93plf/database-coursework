@@ -1,0 +1,44 @@
+# Практика курса «SQL».
+#
+#   docker compose up
+#
+# Открыть http://localhost:8766 — задания, редактор SQL, проверки.
+# Порт занят? Запустите с другим:  PORT=9000 docker compose up
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: student
+      POSTGRES_PASSWORD: student
+      POSTGRES_DB: student_live
+      POSTGRES_INITDB_ARGS: "--locale=C --encoding=UTF8"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U student -d student_live"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+  runner:
+    # :1 — багфиксы приезжают сами по `docker compose pull`.
+    # Нужна ровно та версия, на которой сдавали — поставьте точную, например :1.4.2
+    image: minusd/sql-practice:1
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PG_DSN: postgresql://student:student@postgres:5432/student_live
+      CHECK_DSN: postgresql://student:student@postgres:5432/student_check
+    volumes:
+      - ./pack.enc:/pack.enc:ro
+      - ./solutions:/solutions
+    # Пак распаковывается сюда и живёт только в памяти.
+    tmpfs:
+      - /pack
+    ports:
+      - "${PORT:-8766}:8766"
+
+volumes:
+  pgdata:
