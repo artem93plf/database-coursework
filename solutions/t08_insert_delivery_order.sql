@@ -1,0 +1,2 @@
+INSERT INTO delivery_orders (card_id, courier_id, delivery_address, order_date, delivery_cost, status, delivery_date, comment, is_completed)
+VALUES (1, NULL, 'Москва, улица Арбат, 15', '2025-03-20', 300, 'Создан', NULL, NULL, FALSE)

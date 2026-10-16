@@ -1,0 +1,82 @@
+{
+  "t01_active_clients": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t02_recent_clients": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t03_expensive_deliveries": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t04_unassigned_orders": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t05_insert_client": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 51
+  },
+  "t06_insert_card": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t07_insert_courier": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t08_insert_delivery_order": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t09_deactivate_client": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t10_complete_delivery": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t11_update_delivery_cost": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t12_delete_inactive_couriers": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t13_delete_cancelled_orders": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t14_delete_old_orders": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t15_client_birth_date_range": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t16_delivery_cost_stats": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  }
+}
