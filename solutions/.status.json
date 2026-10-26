@@ -23,5 +23,30 @@
     "passed": true,
     "failed_variants": 0,
     "total_variants": 53
+  },
+  "t06_stay_length_groups": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t07_hotel_cancel_share": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t08_march_revenue": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t09_busy_hotels": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t10_big_ticket_spenders": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
   }
 }
