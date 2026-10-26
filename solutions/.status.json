@@ -1,0 +1,17 @@
+{
+  "t01_top_expensive_bookings": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t02_tickets_second_page": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t03_bookings_summary": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  }
+}
