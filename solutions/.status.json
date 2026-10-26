@@ -58,5 +58,15 @@
     "passed": true,
     "failed_variants": 0,
     "total_variants": 53
+  },
+  "t13_tickets_above_client_avg": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t14_top_hotels_cte": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
   }
 }
