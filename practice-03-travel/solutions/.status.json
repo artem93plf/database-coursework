@@ -1,0 +1,77 @@
+{
+  "t01_top_expensive_bookings": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t02_tickets_second_page": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t03_bookings_summary": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t04_tickets_by_kind_status": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t05_board_stats": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t06_stay_length_groups": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t07_hotel_cancel_share": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t08_march_revenue": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t09_busy_hotels": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t10_big_ticket_spenders": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t11_above_average_bookings": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t12_premium_luxury_bookings": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t13_tickets_above_client_avg": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t14_top_hotels_cte": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t15_russia_tickets_recursive": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  }
+}
