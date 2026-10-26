@@ -1,0 +1,37 @@
+{
+  "t01_fine_gold_bars": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t02_heavy_bars": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t03_withdrawn_bars": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t05_stored_bar_value": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t04_refinery_list": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t06_top_price_bars": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t07_delete_bar_record": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  }
+}
