@@ -48,5 +48,15 @@
     "passed": true,
     "failed_variants": 0,
     "total_variants": 53
+  },
+  "t11_above_average_bookings": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t12_premium_luxury_bookings": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
   }
 }

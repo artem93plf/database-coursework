@@ -1,5 +1,5 @@
 SELECT hotel_id, 
-sum(case WHEN status = 'completed' then 1 else 0 end) as completed_count,
+count(status) as completed_count,
 sum(price) as revenue
 from hotel_bookings
 WHERE status = 'completed'
