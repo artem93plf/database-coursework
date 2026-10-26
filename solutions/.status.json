@@ -13,5 +13,15 @@
     "passed": true,
     "failed_variants": 0,
     "total_variants": 53
+  },
+  "t04_tickets_by_kind_status": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t05_board_stats": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
   }
 }
