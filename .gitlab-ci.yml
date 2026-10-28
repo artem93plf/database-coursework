@@ -1,4 +1,12 @@
 # Проверка решений при каждом пуше. Та же команда, что вы запускаете локально.
+
+workflow:
+  auto_cancel:
+    on_new_commit: interruptible
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PROJECT_ID == "30929"
+
 variables:
   GITLAB_DOCKER_PROXY: gitlab.education.tbank.ru:443/t-databases-pg-2026/materials/dependency_proxy/containers
 
