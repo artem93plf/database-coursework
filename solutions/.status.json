@@ -3,5 +3,10 @@
     "passed": true,
     "failed_variants": 0,
     "total_variants": 53
+  },
+  "t02_create_favorite_numbers": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
   }
 }
