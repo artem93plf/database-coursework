@@ -38,5 +38,10 @@
     "passed": true,
     "failed_variants": 0,
     "total_variants": 53
+  },
+  "t11_busy_tariffs": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
   }
 }
