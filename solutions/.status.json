@@ -33,5 +33,10 @@
     "passed": true,
     "failed_variants": 0,
     "total_variants": 53
+  },
+  "t10_top_options": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
   }
 }
