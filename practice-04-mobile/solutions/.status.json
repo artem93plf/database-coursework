@@ -1,0 +1,77 @@
+{
+  "t01_create_devices": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t02_create_favorite_numbers": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t03_create_number_transfers": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t04_tariff_constraints": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t05_sim_cards_set_null": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t06_close_subscribers": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t07_drop_archived_tariffs": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t10_top_options": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t11_busy_tariffs": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t12_family_sizes": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t15_esim_share": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t13_subscribers_without_sim": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t08_delete_blocked_without_sim": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t09_add_subscriber": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t14_expensive_used_options": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  }
+}
