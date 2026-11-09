@@ -1,0 +1,32 @@
+# Проверка решений при каждом пуше. Та же команда, что вы запускаете локально.
+variables:
+  GITLAB_DOCKER_PROXY: gitlab.education.tbank.ru:443/t-databases-pg-2026/materials/dependency_proxy/containers
+
+check:
+  image: ${GITLAB_DOCKER_PROXY}/library/docker:27-cli
+  tags:
+    - dind
+  services:
+    - name: ${GITLAB_DOCKER_PROXY}/library/docker:dind
+      alias: docker
+      # Демон dind не знает корпоративный CA, которым подписан gitlab.education.tbank.ru.
+      command: ["--insecure-registry=gitlab.education.tbank.ru:443"]
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    # dind стартует параллельно с задачей — ждём, пока демон начнёт отвечать.
+    - |
+      for i in $(seq 1 60); do
+        docker info >/dev/null 2>&1 && break
+        echo "Ждём docker daemon ($i/60)..."
+        sleep 2
+      done
+      docker info >/dev/null
+    - echo "$CI_JOB_TOKEN" | docker login gitlab.education.tbank.ru:443 -u gitlab-ci-token --password-stdin
+    - docker pull ${GITLAB_DOCKER_PROXY}/library/postgres:16-alpine
+    - docker tag ${GITLAB_DOCKER_PROXY}/library/postgres:16-alpine postgres:16-alpine
+    - docker pull ${GITLAB_DOCKER_PROXY}/minusd/sql-practice:1
+    - docker tag ${GITLAB_DOCKER_PROXY}/minusd/sql-practice:1 minusd/sql-practice:1
+  script:
+    - docker compose run --rm runner runner ci --pack /pack.enc --solutions /solutions
