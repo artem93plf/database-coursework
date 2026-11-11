@@ -93,31 +93,3 @@ CREATE TABLE loans (
 >
 > Измените `book_catalog`: добавьте внешний ключ `topic_code` на `topics(code)` с `ON DELETE RESTRICT` и удалите колонку `topic_title`. Сохраните строки каталога и не изменяйте справочник.
 
-## Запуск и проверка
-
-Нужен Docker с `docker compose`. Запустите практику из этой папки:
-
-```bash
-docker compose pull && docker compose up
-```
-
-Откройте **http://localhost:8766**: там список заданий, редактор SQL и проверка решений. Если порт занят, задайте другой:
-
-```bash
-PORT=9000 docker compose up
-```
-
-Решения хранятся в `solutions/`, по одному файлу на задание. Проверить их все разом:
-
-```bash
-docker compose run --rm runner runner ci --pack /pack.enc --solutions /solutions
-```
-
-## Файлы
-
-| Файл | Что это |
-| --- | --- |
-| `docker-compose.yml` | запуск практики |
-| `pack.enc` | задания, схема и данные; двоичный файл, не редактировать |
-| `solutions/` | решения заданий |
-| `.gitattributes` | защита `pack.enc` от порчи Git-ом |
