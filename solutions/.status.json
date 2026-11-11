@@ -33,5 +33,10 @@
     "passed": true,
     "failed_variants": 0,
     "total_variants": 53
+  },
+  "t08_link_catalog_to_topics": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
   }
 }
