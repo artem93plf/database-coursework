@@ -3,5 +3,10 @@
     "passed": true,
     "failed_variants": 0,
     "total_variants": 53
+  },
+  "t04_unknown_topic_codes": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
   }
 }
