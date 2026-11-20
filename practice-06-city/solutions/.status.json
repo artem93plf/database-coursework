@@ -1,0 +1,62 @@
+{
+  "t01_events_in_venues": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t04_subscriber_tickets": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t05_revenue_per_category": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t06_busy_buyers": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t07_online_events": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t02_events_with_category_and_venue": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t03_events_per_venue": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t08_events_without_tickets": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t09_tickets_above_event_avg": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t10_venues_above_avg_revenue": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t11_ticket_number_per_buyer": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  },
+  "t12_top_events_in_category": {
+    "passed": true,
+    "failed_variants": 0,
+    "total_variants": 53
+  }
+}
